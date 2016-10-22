@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+		
+<!--ATTRIBUTES DECLARATION -->
+<aura:attribute name="item" type="YoutubeDataParser.cls_items"/>
+    <article class="slds-card">
+	<div class="slds-media slds-media--responsive">
+	  <div class="slds-media__figure">
+	   <a href="{!'https://www.youtube.com/watch?v='+v.item.id.videoId}" target="_blank">
+	    <img src="{!v.item.snippet.thumbnails.high.url}" style="height:100px;" alt="Placeholder" />
+	    </a>
+	  </div>
+        
+	  <div class="slds-media__body">
+	    <b>{!v.item.snippet.title}</b>
+	    <br/>
+	    <p>{!v.item.snippet.description}</p>
+	  </div>
+	</div>
+    </article>
+    
+</aura:component>

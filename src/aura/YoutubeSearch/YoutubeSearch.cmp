@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="Youtubesearch">
+    
+<!--ATTRIBUTES DECLARATION -->
+<aura:attribute name="data" type="YoutubeDataParser"/>
+<aura:attribute name="SearchString" type="String" default="Lightning Components"/>
+
+<aura:handler name="init" value="{!this}" action="{!c.getresults}" />
+<aura:handler event="c:searchEvent" action="{!c.initiateSearch}"/>
+
+<div class="slds">
+ <b>RESULTS ON YOUTUBE FOR "{!v.SearchString}"</b>
+<hr/>
+	<aura:iteration items="{!v.data.items}" var="cardItem">
+	  	<c:YoutubeResultCard item="{!cardItem}"/>
+		<br/>
+	</aura:iteration>
+</div>
+     <auraStorage:init name="actions" persistent="false" secure="false"
+             maxSize="1024" />
+</aura:component>

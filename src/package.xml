@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce Saturday</fullName>
+    <types>
+        <members>YoutubeDataParser</members>
+        <members>Youtubesearch</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>SearchWidget</members>
+        <members>YoutubeResultCard</members>
+        <members>YoutubeSearch</members>
+        <members>YoutubeSearchApp</members>
+        <members>searchEvent</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Avatar</members>
+        <members>YoutubeLogo</members>
+        <name>StaticResource</name>
+    </types>
+    <version>37.0</version>
+</Package>
