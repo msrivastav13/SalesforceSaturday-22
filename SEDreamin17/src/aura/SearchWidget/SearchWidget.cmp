@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="searchEvt" type="c:searchEvent"/>
+	 <header class="slds-global-header_container">
+         <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">
+             Skip to Navigation
+         </a>
+         <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text--focus">
+             Skip to Main Content
+         </a>
+  	<div class="slds-global-header slds-grid slds-grid--align-spread">
+        <div class="slds-global-header__item">
+          <div class="slds-global-header__logo">
+            <img src="{!$Resource.YoutubeLogo}" alt="" />
+          </div>
+        </div>
+    <div class="slds-global-header__item slds-global-header__item--search">
+      <div class="slds-form-element slds-lookup">
+        <label class="slds-assistive-text" for="global-search-01">Search Salesforce</label>
+        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+            <lightning:icon iconName="utility:search" size="x-small" alternativeText="Indicates Search" class="slds-input__icon"/>
+          <ui:inputText value="Lightning Components" aura:id="globalsearch" class="slds-input slds-lookup__search-input" placeholder="Search Youtube" keyup="{!c.search}"/>
+        </div>
+      </div>
+    </div>
+    <ul class="slds-global-header__item slds-grid slds-grid--vertical-align-center">
+      <li class="slds-dropdown-trigger slds-dropdown-trigger--click slds-m-left--x-small">
+        <button class="slds-button" title="person name" aria-haspopup="true">
+          <span class="slds-avatar slds-avatar--circle slds-avatar--medium">
+            <img src="{!$Resource.Avatar}" alt="person name" />
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+</aura:component>
